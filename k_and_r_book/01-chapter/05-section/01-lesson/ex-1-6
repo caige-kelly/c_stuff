@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+main()
+{
+    int c, b;
+
+    while (c = getchar()) {
+        printf("%3d %6d\n", c != EOF, c);
+
+        if (c == EOF)
+            break;
+    }
+}
