@@ -12,28 +12,28 @@
 
 int main(void)
 {
-        int i;
-        char c; 
+    int i;
+    char c; 
 
-        i = 0;
-        while ((c=getchar()) != EOF) {
-                if (i == TABSTOP)
-                    i = 0;
+    i = 0;
+    while ((c=getchar()) != EOF) {
+        if (i == TABSTOP)
+            i = 0;
 
-                if (c == '\t') {
-                    while(i != TABSTOP) {
-                        putchar(32);
-                        ++i;
-                    }
-                }
-                else if (c == '\n') {
-                    putchar(10);
-                    i=0;
-                }
-                else {
-                    putchar(c);
-                    ++i;
-                }
+        if (c == '\t') {
+            while(i != TABSTOP) {
+                putchar(32);
+                ++i;
+            }
         }
-        return 0;
+        else if (c == '\n') {
+            putchar(10);
+            i=0;
+        }
+        else {
+            putchar(c);
+            ++i;
+        }
+    }
+    return 0;
 }
